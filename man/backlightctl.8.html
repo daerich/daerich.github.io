@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <style>
+    table.head, table.foot { width: 100%; }
+    td.head-rtitle, td.foot-os { text-align: right; }
+    td.head-vol { text-align: center; }
+    div.Pp { margin: 1ex 0ex; }
+    div.Nd, div.Bf, div.Op { display: inline; }
+    span.Pa, span.Ad { font-style: italic; }
+    span.Ms { font-weight: bold; }
+    dl.Bl-diag > dt { font-weight: bold; }
+    code.Nm, code.Fl, code.Cm, code.Ic, code.In, code.Fd, code.Fn,
+    code.Cd { font-weight: bold; font-family: inherit; }
+  </style>
+  <title>BACKLIGHTCTL(1)</title>
+</head>
+<body>
+<table class="head">
+  <tr>
+    <td class="head-ltitle">BACKLIGHTCTL(1)</td>
+    <td class="head-vol">General Commands Manual</td>
+    <td class="head-rtitle">BACKLIGHTCTL(1)</td>
+  </tr>
+</table>
+<div class="manual-text">
+<p class="Pp"></p>
+<section class="Sh">
+<h1 class="Sh" id="NAME"><a class="permalink" href="#NAME">NAME</a></h1>
+backlightctl - control backlightd daemon
+</section>
+<section class="Sh">
+<h1 class="Sh" id="SYNOPSIS"><a class="permalink" href="#SYNOPSIS">SYNOPSIS</a></h1>
+<b>backlightctl</b> [OPTION] SCALE
+</section>
+<section class="Sh">
+<h1 class="Sh" id="DESCRIPTION"><a class="permalink" href="#DESCRIPTION">DESCRIPTION</a></h1>
+backlightctl pushes new configuration options to backlightd and signals it to
+  reload.
+</section>
+<section class="Sh">
+<h1 class="Sh" id="OPTIONS"><a class="permalink" href="#OPTIONS">OPTIONS</a></h1>
+<dl class="Bl-tag">
+  <dt>p</dt>
+  <dd><b>Print</b> current brightness scale in percent</dd>
+  <dt>s</dt>
+  <dd><b>Set</b> current brightness to <b>SCALE</b> ,where scale is an integer
+      between 10 and 100 (naturally).</dd>
+</dl>
+</section>
+<section class="Sh">
+<h1 class="Sh" id="FILES"><a class="permalink" href="#FILES">FILES</a></h1>
+<dl class="Bl-tag">
+  <dt></dt>
+  <dd><i>/tmp/backlightd.pid - pid file for backlightctl</i>
+    <p class="Pp"><i>/etc/backlightd_d.conf - backlightd's configuration
+        file</i></p>
+  </dd>
+</dl>
+</section>
+<section class="Sh">
+<h1 class="Sh" id="NOTES"><a class="permalink" href="#NOTES">NOTES</a></h1>
+<b>Only the first letter of the command is checked.</b>
+<p class="Pp">The rest is ignored(commands resemble &quot;BSD-style&quot;)</p>
+</section>
+<section class="Sh">
+<h1 class="Sh" id="AUTHOR"><a class="permalink" href="#AUTHOR">AUTHOR</a></h1>
+Written by daerich and tracked on github.com
+</section>
+<section class="Sh">
+<h1 class="Sh" id="EXAMPLES"><a class="permalink" href="#EXAMPLES">EXAMPLES</a></h1>
+Set brightness to 40%:
+<dl class="Bl-tag">
+  <dt></dt>
+  <dd><i>backlightctl s 40</i></dd>
+</dl>
+<p class="Pp">Print brightness:</p>
+<dl class="Bl-tag">
+  <dt></dt>
+  <dd><i>backlightctl p</i></dd>
+</dl>
+<p class="Pp">Print help</p>
+<dl class="Bl-tag">
+  <dt></dt>
+  <dd><i>backlightctl</i></dd>
+</dl>
+<p class="Pp">or</p>
+<dl class="Bl-tag">
+  <dt></dt>
+  <dd><i>backlightctl sp</i></dd>
+</dl>
+<p class="Pp">or</p>
+<dl class="Bl-tag">
+  <dt></dt>
+  <dd><i>backlightctl any unknown words</i></dd>
+</dl>
+</section>
+</div>
+<table class="foot">
+  <tr>
+    <td class="foot-date">2021-06-22</td>
+    <td class="foot-os">GNU/LINUX</td>
+  </tr>
+</table>
+</body>
+</html>
