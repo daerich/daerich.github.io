@@ -7,5 +7,4 @@ __My [patchwork](https://github.com/daerich/patchwork)__
 
 - [backlightd - a systemd-backlightd replacement](https://github.com/daerich/backlightd) -- [manpage](https://nixkernel.cc/man/backlightctl.html)
 - [Cue -a C-pre-pre-processor](https://github.com/daerich/Cue)
-- [mgrep a minimalist grep clone](https://github.com/daerich/mgrep)
-
+- [watch/hawk - implementation respecting your shell enviroment](https://github.com/daerich/watch)
