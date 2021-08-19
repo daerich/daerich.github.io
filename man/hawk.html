@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <style>
+    table.head, table.foot { width: 100%; }
+    td.head-rtitle, td.foot-os { text-align: right; }
+    td.head-vol { text-align: center; }
+    div.Pp { margin: 1ex 0ex; }
+    div.Nd, div.Bf, div.Op { display: inline; }
+    span.Pa, span.Ad { font-style: italic; }
+    span.Ms { font-weight: bold; }
+    dl.Bl-diag > dt { font-weight: bold; }
+    code.Nm, code.Fl, code.Cm, code.Ic, code.In, code.Fd, code.Fn,
+    code.Cd { font-weight: bold; font-family: inherit; }
+  </style>
+  <title>HAWK(1)</title>
+</head>
+<body>
+<table class="head">
+  <tr>
+    <td class="head-ltitle">HAWK(1)</td>
+    <td class="head-vol">General Commands Manual</td>
+    <td class="head-rtitle">HAWK(1)</td>
+  </tr>
+</table>
+<div class="manual-text">
+<section class="Sh">
+<h1 class="Sh" id="NAME"><a class="permalink" href="#NAME">NAME</a></h1>
+hawk - watch with environment heuristics
+</section>
+<section class="Sh">
+<h1 class="Sh" id="SYNOPSIS"><a class="permalink" href="#SYNOPSIS">SYNOPSIS</a></h1>
+<b>hawk</b> [OPTION..] [COMMAND]
+</section>
+<section class="Sh">
+<h1 class="Sh" id="DESCRIPTION"><a class="permalink" href="#DESCRIPTION">DESCRIPTION</a></h1>
+hawk runs a command for n seconds (2 seconds by default) and displays its
+  output, updated every interval. The shell is determined dynamically from the
+  environment, which can be overriden by its environment variable or a command
+  line switch ( <b>-s</b> ).
+</section>
+<section class="Sh">
+<h1 class="Sh" id="OPTIONS"><a class="permalink" href="#OPTIONS">OPTIONS</a></h1>
+<dl class="Bl-tag">
+  <dt>
+  </dt>
+  <dd><i>-n, --interval</i> <i>NUMBER</i>
+     Set refresh interval in seconds(default is 2 seconds).
+    <p class="Pp"><i>-s, --shell</i> <i>PATH</i>
+       Set specific shell to be used instead.</p>
+    <p class="Pp"><b>Note:</b> If the shell doesn't support non interactive
+        shell calls, a POSIX compliant shell is expected at command
+        &quot;sh&quot;.</p>
+    <p class="Pp"><i>-v, --version</i>
+       Print version information and exit successfully.</p>
+    <p class="Pp"></p>
+  </dd>
+</dl>
+</section>
+<section class="Sh">
+<h1 class="Sh" id="ENVIRONMENT"><a class="permalink" href="#ENVIRONMENT">ENVIRONMENT</a></h1>
+<b>$SHELL</b>
+<p class="Pp"><i>The shell to be used by default</i> <i>(usually set by your
+    initscripts).</i></p>
+</section>
+<section class="Sh">
+<h1 class="Sh" id="RETURN_STATUS"><a class="permalink" href="#RETURN_STATUS">RETURN
+  STATUS</a></h1>
+Almost always exits successfully, unless you specify invalid options, numbers,
+  commands. If you play it right, it will exit successfully...
+</section>
+<section class="Sh">
+<h1 class="Sh" id="AUTHORS"><a class="permalink" href="#AUTHORS">AUTHORS</a></h1>
+Written by DaErich and tracked on
+  <a class="Lk" href="https://github.com/daerich/watch">GitHub</a>
+</section>
+<section class="Sh">
+<h1 class="Sh" id="SEE_ALSO"><a class="permalink" href="#SEE_ALSO">SEE
+  ALSO</a></h1>
+watch(1)
+<p class="Pp"></p>
+</section>
+</div>
+<table class="foot">
+  <tr>
+    <td class="foot-date">2021-08-19</td>
+    <td class="foot-os">GNU/Linux</td>
+  </tr>
+</table>
+</body>
+</html>
