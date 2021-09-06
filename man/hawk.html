@@ -52,6 +52,12 @@ hawk runs a command for n seconds (2 seconds by default) and displays its
     <p class="Pp"><b>Note:</b> If the shell doesn't support non interactive
         shell calls, a POSIX compliant shell is expected at command
         &quot;sh&quot;.</p>
+    <p class="Pp"><i>--force-stdout</i>
+       Force Standard Output on display</p>
+    <p class="Pp"><b>Note:</b> Normally hawk dynamically determines the output
+        to be displayed, based on the command's exit status. If your command
+        always prints to STDOUT regardless of its exit status use this
+      option.</p>
     <p class="Pp"><i>-v, --version</i>
        Print version information and exit successfully.</p>
     <p class="Pp"></p>
@@ -61,8 +67,12 @@ hawk runs a command for n seconds (2 seconds by default) and displays its
 <section class="Sh">
 <h1 class="Sh" id="ENVIRONMENT"><a class="permalink" href="#ENVIRONMENT">ENVIRONMENT</a></h1>
 <b>$SHELL</b>
-<p class="Pp"><i>The shell to be used by default</i> <i>(usually set by your
+<p class="Pp"><i>The shell to be used by default(usually set by your
     initscripts).</i></p>
+<p class="Pp"><b>$PATH</b></p>
+<p class="Pp"><i>Relied upon for shell resolution(for portability
+  reasons)</i></p>
+<p class="Pp"></p>
 </section>
 <section class="Sh">
 <h1 class="Sh" id="RETURN_STATUS"><a class="permalink" href="#RETURN_STATUS">RETURN
