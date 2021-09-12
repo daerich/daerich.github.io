@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <style>
+    table.head, table.foot { width: 100%; }
+    td.head-rtitle, td.foot-os { text-align: right; }
+    td.head-vol { text-align: center; }
+    div.Pp { margin: 1ex 0ex; }
+    div.Nd, div.Bf, div.Op { display: inline; }
+    span.Pa, span.Ad { font-style: italic; }
+    span.Ms { font-weight: bold; }
+    dl.Bl-diag > dt { font-weight: bold; }
+    code.Nm, code.Fl, code.Cm, code.Ic, code.In, code.Fd, code.Fn,
+    code.Cd { font-weight: bold; font-family: inherit; }
+  </style>
+  <title>RESETTY(1)</title>
+</head>
+<body>
+<table class="head">
+  <tr>
+    <td class="head-ltitle">RESETTY(1)</td>
+    <td class="head-vol">General Commands Manual</td>
+    <td class="head-rtitle">RESETTY(1)</td>
+  </tr>
+</table>
+<div class="manual-text">
+<section class="Sh">
+<h1 class="Sh" id="NAME"><a class="permalink" href="#NAME">NAME</a></h1>
+resetty - heuristic terminal reset clone
+</section>
+<section class="Sh">
+<h1 class="Sh" id="SYNOPSIS"><a class="permalink" href="#SYNOPSIS">SYNOPSIS</a></h1>
+<b>resetty</b> [TTY]
+</section>
+<section class="Sh">
+<h1 class="Sh" id="DESCRIPTION"><a class="permalink" href="#DESCRIPTION">DESCRIPTION</a></h1>
+<b>resetty</b> resets ttys in a dynamic fashion if no tty is specified. It
+  employs some heuristics to find the attached terminal. (It parses the
+  <b>&quot;proc&quot;</b> directory for example). Otherwise it just resets the
+  specified tty, if permissible by the operating system.
+</section>
+<section class="Sh">
+<h1 class="Sh" id="EXIT_STATUS"><a class="permalink" href="#EXIT_STATUS">EXIT
+  STATUS</a></h1>
+Returns 0 on successfully attempted resets, 1 on failed setup routines.
+</section>
+<section class="Sh">
+<h1 class="Sh" id="FILES"><a class="permalink" href="#FILES">FILES</a></h1>
+<dl class="Bl-tag">
+  <dt></dt>
+  <dd><i>/proc/</i></dd>
+</dl>
+</section>
+<section class="Sh">
+<h1 class="Sh" id="NOTES"><a class="permalink" href="#NOTES">NOTES</a></h1>
+Currently resetting a &quot;remote&quot; tty causes the terminal to just display
+  a blank screen with just a (blinking) cursor. <b>This is completely
+  normal.</b> Just press <i>&quot;&lt;ENTER&gt;&quot; /
+  &quot;&lt;CTRL&gt;+&lt;J&gt;&quot;</i> or any other shell reset key to restore
+  your prompt. There seems nothing to be done about it. Otherwise your terminal
+  is properly reset.
+</section>
+<section class="Sh">
+<h1 class="Sh" id="AUTHORS"><a class="permalink" href="#AUTHORS">AUTHORS</a></h1>
+<a class="Lk" href="https://github/daerich/resetty">Written by DaErich and
+  tracked on GitHub/CodeBerg.</a>
+</section>
+<section class="Sh">
+<h1 class="Sh" id="SEE_ALSO"><a class="permalink" href="#SEE_ALSO">SEE
+  ALSO</a></h1>
+reset(1), tset(1)
+</section>
+</div>
+<table class="foot">
+  <tr>
+    <td class="foot-date">2021-09-12</td>
+    <td class="foot-os">GNU/LINUX</td>
+  </tr>
+</table>
+</body>
+</html>
